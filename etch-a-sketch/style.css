@@ -1,0 +1,12 @@
+.box{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+.box:hover{
+    background-color: black;
+}
+
+.row{
+    display: flex;
+}
