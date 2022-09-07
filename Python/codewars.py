@@ -65,3 +65,24 @@ def no_odds(values):
 
 def no_odds(values):
     return [i for i in values if i % 2 == 0]
+
+
+# https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad
+# Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+def invert(lst):
+    return [i*-1 for i in lst]
+
+
+# https://www.codewars.com/kata/56f69d9f9400f508fb000ba7 
+# You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just 
+# appreciate the full number, he has to start counting them from 1. As a good parent, you will sit and count with him. Given the number (n), 
+# populate an array with all numbers up to and including that number, but excluding zero.
+def monkey_count(n):
+    return [*range(1,n +1,1)]
+
+
+# https://www.codewars.com/kata/5667e8f4e3f572a8f2000039 
+# This time no story, no theory. The examples below show you how to write function accum
+def accum(s):
+    return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+# enumerate adds to a constant
