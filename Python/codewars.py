@@ -86,3 +86,30 @@ def monkey_count(n):
 def accum(s):
     return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
 # enumerate adds to a constant
+
+
+# https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/python
+# Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need 
+# to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning 
+# or the end of the sentence!
+def smash(words):
+    return" ".join(words); 
+
+
+# https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/python
+# Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+def count_sheep(n):
+    sheep = ''
+    for i in range(n):
+        sheep+=f"{i+1} sheep..."
+    return sheep
+
+# https://www.codewars.com/kata/555086d53eac039a2a000083/train/python
+# Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has 
+# an even number of petals and the other has an odd number of petals it means they are in love. Write a function that will take the number of 
+# petals of each flower and return true if they are in love and false if they aren't.
+def lovefunc( flower1, flower2 ):
+    if (flower1 + flower2) % 2 != 1:
+        return False
+    else:
+        return True
