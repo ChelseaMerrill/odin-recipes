@@ -99,11 +99,11 @@ print(3 in mylist) #True
 print ('python' not in mylist) #False
 
 #7:identity: used to compare the memory locations of two objects. 'is' and 'is not' are the identy operators in python, output will be a boolean
-h, i = 10, 10
+h, h2 = 10, 10
 print(id(h))
-print(id(i))
-print(h is i) #True
-print(h is not i) #False
+print(id(h2))
+print(h is h2) #True
+print(h is not h2) #False
 
 j, k = [1,2,3], [1,2,3]
 print( j is k) #False
@@ -172,3 +172,233 @@ if my_num > 0:
         print('number is zero')
 else:
     print('negative number')
+
+# while (only language that you can and an if statement to a while loop) loop
+i = 1
+while i <= 6:
+    print(i)
+    i+= 1
+print('Done')
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# Done
+
+i2 = 1
+while i2 <= 6:
+    print(i2)
+    i2+= 1
+else: 
+    print('else statement is executed at the end')
+print('Done')
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# else statement is executed at the end
+# Done
+
+#for loop
+fruits = ['apple', 'banana', 'grape', 'cheery', 'mango', 'pineapple']
+for i in fruits:
+    print(i) #returns the list
+
+numberList = [1,2,3,4,5,6,7,8,9,]
+for x in numberList:
+    print(x)
+
+
+sum = 0
+for val in numberList:
+    sum = sum +val
+print(sum)
+
+
+for x in numberList:
+    print(x)
+else: 
+    print('no items left')
+
+
+for x in 'python':
+    print(x)
+# p
+# y
+# t
+# h
+# o
+# n
+
+#range: (start, stop, stop size)
+print(range(10)) #range(0,10)
+
+for x in range(2,6):
+    print(x)
+# 2
+# 3
+# 4
+# 5
+
+for x in range(1, 10, 2):
+    print(x)
+# 1
+# 3
+# 5
+# 7
+# 9
+
+#index
+for index in range(len(fruits)):
+    print('fruit name is:', fruits[index])
+# fruit name is: apple
+# fruit name is: banana
+# fruit name is: grape
+# fruit name is: cheery
+# fruit name is: mango
+# fruit name is: pineapple
+
+#Enumerate: a method that adds a counter to an iterable and returns it in a form of enumerate object 
+for index, value in enumerate(fruits):
+    print(index, value)
+# 0 apple
+# 1 banana
+# 2 grape
+# 3 cheery
+# 4 mango
+# 5 pineapple
+
+#Nested For Loop
+for x in range(1,4):
+    for y in range (1,4):
+        print(x,y)
+# 1 1
+# 1 2
+# 1 3
+# 2 1
+# 2 2
+# 2 3
+# 3 1
+# 3 2
+# 3 3
+
+adj = ['red', 'big', 'tasty']
+more_fruit = ['apple', 'banana', 'cherry']
+for x in adj:
+    for y in more_fruit:
+        print(x,y)
+# red apple
+# red banana
+# red cherry
+# big apple
+# big banana
+# big cherry
+# tasty apple
+# tasty banana
+# tasty cherry
+
+for num1 in range(2):
+    for num2 in range(5, 10):
+        print(num1, ",", num2)
+# 0 , 5
+# 0 , 6
+# 0 , 7
+# 0 , 8
+# 0 , 9
+# 1 , 5
+# 1 , 6
+# 1 , 7
+# 1 , 8
+# 1 , 9
+
+
+#break
+for x in fruits:
+    print(x)
+    if x == 'mango':
+        break
+
+#nested loop with a break
+for x in range (1,4):
+    for y in range(1,4):
+        print(x,y)
+        if x ==2 and y == 2:
+            break
+# 1 1
+# 1 2
+# 1 3
+# 2 1
+# 2 2
+# 3 1
+# 3 2
+# 3 3
+
+#continue: rejects all remaining statements in the current iteration of the loop and moves the control back to the top of the loop
+i = 0
+while i <= 10:
+    i += 1
+    if i ==5:
+        continue
+    print(i)
+# 1
+# 2
+# 3
+# 4
+# 6 <--- skiped 5
+# 7
+# 8
+# 9
+# 10
+# 11  
+
+
+for num in numberList:
+    if num % 2 != 0:
+        continue
+    print(num)
+# 2
+# 4
+# 6
+# 8
+
+#Strings - triple quotes used for formating
+
+#slice
+string = "this is my python string"
+print(string[:]) # this is my python string
+print(string[11:]) # python string
+print(string[:11]) # this is my
+
+#How to update a string
+str1 = 'hello, my name is Chelsea'
+str1 += ' Merrill'
+print(str1) #hello, my name is Chelsea Merrill (memory allocation changed)
+
+#how to delete
+str2 = 'second string'
+del str2 #is not deleted
+
+#anding string to itself
+print(str1 * 3) 
+#hello, my name is Chelsea Merrillhello, my name is Chelsea Merrillhello, my name is Chelsea Merrill
+
+#ord() : returns the ASCII of the character
+ch = 'b'
+print(ord(ch)) #98
+
+#chr(): returns charcter represented by ASCII number
+print(chr(65)) #A
+print(chr(97)) #a
+
+print ('PYTHION' == 'python') #False
+print ('PYTHION' < 'python')  #True (based on ASCII values)
+
+print('my' in string) #True
+
+
+
+
