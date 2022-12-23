@@ -463,6 +463,7 @@ even= [x for x in range(20) if x % 2 == 0]
 print(even) #[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 
 #Tuples: a collection which is ordered and unchangeble. similar to lists but the cannot be changed. Uses parenthesis instead of squar brackets
+#benefits of using tuples over list: when you dont want to change value 
 tuple1 = (1,2,3)
 
 #creating a tuple from a string
@@ -472,7 +473,115 @@ print(tuple2) #('p', 'y', 't', 'h', 'o', 'n')
 tuple3= tuple({1: 'chelsea', 2: 'josh'})
 print(tuple3) #(1,2)
 
-#benefits of using tuples over list: when you dont want to change value 
+#Dictionary: key-value pairs
+employee1 = {'name': 'chelsea', 'age': 29, 'DOB': '12/23/1993' }
+print(employee1['name'])
+print(employee1.get('name'))
+
+employee1['phoneNum'] = '212-4546'
+print(employee1) #{'name': 'chelsea', 'age': 29, 'DOB': '12/23/1993', 'phoneNum': '212-4546'}
+
+#pop(): remove item from dictionary
+print(employee1.pop('age')) # 29
+print(employee1) #{'name': 'chelsea', 'DOB': '12/23/1993', 'phoneNum': '212-4546'}
+
+#popitem(): removes lat item
+#del(): del employee1['name']
+#clear(): keeps the dictionary but deletes what is inside of it
+
+#looping dictionaries
+cube={1:1, 2:8, 3:27, 4:64}
+for num in cube:
+    print('cube of', num, 'is', cube[num])
+# cube of 1 is 1
+# cube of 2 is 8
+# cube of 3 is 27
+# cube of 4 is 64
+
+#keys
+print(employee1.keys())
+#dict_keys(['name', 'DOB', 'phoneNum'])
+
+#value
+print(employee1.values())
+# dict_values(['chelsea', '12/23/1993', '212-4546'])
+
+#items
+print(employee1.items())
+# dict_items([('name', 'chelsea'), ('DOB', '12/23/1993'), ('phoneNum', '212-4546')])
+
+#copy()
+mycopy = mylist.copy()
+
+#update(): inserts at the end
+employee1.update({'color': 'white'})
+print(employee1)
+#with multiples
+employee1.update(money = '$10,000', eyes = 'blue')
+print(employee1)
+
+#from keys: takes in two parameters (sequence, value(optional))
+mykeys = {'a', 'e', 'i', 'o', 'u'}
+value = 'vowel'
+print(dict.fromkeys(mykeys, value)) #{'i': 'vowel', 'o': 'vowel', 'a': 'vowel', 'u': 'vowel', 'e': 'vowel'}
+
+#setdefault: creates key and set default value of none. we can put in value though
+
+#dir()
+
+#Functions
+def welcomeUser(name):
+    print("Dear " + str(name))
+welcomeUser('chelsea')
+#Dear chelsea
+
+def isEvenOrOdd(num):
+    if (num % 2 == 0):
+        print('even')
+    else:
+        print('odd')
+isEvenOrOdd(27) #odd
+
+#doc string: the first string after the function header is called the docstring and is short for documentation string. It will return what's in the triple quotes
+print(welcomeUser.__doc__) #None
+
+def addFunc(x,y):
+    return x + y
+addFunc(2, 4)
+
+#Arguments
+def welcomesYou (name, message):
+    print("Dear {0}, {1}".format(name,message))
+welcomesYou("chelsea", 'hello')
+#Dear chelsea, hello
+
+def employeeDetails(**user):
+    print('Name', user['name'])
+    print('Age', user['age'])
+    print('Company', user['company'])
+print(employeeDetails(name="chelsea", age=29, company="JG"))
+# Name chelsea
+# Age 29
+# Company JG
+
+#Arbitrary Argument: when you're not sure how many arguments will be passed
+def welcome(*names):
+    print(names)
+    for name in names:
+        print('welcome' +str(name))
+welcome('josh') #welcome josh
+
+#Recursive: 
+def func1():
+    print('hello')
+func1()
+
+def func2():
+    print('hi')
+    func1()
+func2()
 
 
-
+def factorial(num):
+    return 1 if num ==1 else (num * factorial(num-1))
+print(factorial(5)) #120
