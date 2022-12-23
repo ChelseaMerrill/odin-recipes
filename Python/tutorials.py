@@ -399,6 +399,80 @@ print ('PYTHION' < 'python')  #True (based on ASCII values)
 
 print('my' in string) #True
 
+#str(): removes whitespace from the begining
+whiteString = "      test"
+print(whiteString)
+print(whiteString.strip())
+#       test
+# test
+
+#len(): length
+#lower(): lowercase  / islower(): boolean if it is lowercase 
+#upper(): uppercase / isupper(): boolean if it is upper 
+#isalpha() : checks if all characters are alphabetical letters
+#isdigit(): checks to see if it is all numbers
+#isalnum(): checks in string is alphanumberic
+#join(): concatenates
+#split(): breaks up string at a specified location
+#replace(): replaces -> new copy
+#find(): returns the first occurance of event 
+#startswith()
+#endswith()
+
+#sorted: sorts and returns a list
+messy_String = 'hawiqef'
+print(sorted(messy_String)) #['a', 'e', 'f', 'h', 'i', 'q', 'w']
+
+#count(): counts number of times something occurs
+new_string = 'how many times is many in here?'
+print(new_string.count('many')) #2
+
+
+#List are mutable and Tuplet is imutable 
+list1 = ['python', 'java', 'c']
+del list1[2]
+print(list1) # [''python', 'java']
+# del list1
+print(list1) #all items are deleted
+
+#concatenate lisrs: use + 
+#Length: len()
+#Repetion: print(list*7)
+#Membership : in operator and not in, returns boolen
+#smallest in list: min()
+#largest in list: max()
+#sum(): sum of all numbers in the list
+#Append: adds element to end of list
+    # list.append('value')
+#Extend: appends all elements from on list to another list and returns none
+    #list1.extends(lists)
+#insert: adds element based on index
+    # list.insert(index, value you are inserting)
+#remove: list.remove(value) (only removes first occurance of the value)
+#pop: removes at a given index or the last ---> a =list.pop() and b=list.pop(2)
+#count()
+#reverse()
+#sort() : for decending order do list.sort(reverse=True)
+#split()
+
+#List Comprehension :concise way to create a new lists
+cube = [i**3 for i in range(10)]
+print(cube) #[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+
+even= [x for x in range(20) if x % 2 == 0]
+print(even) #[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+#Tuples: a collection which is ordered and unchangeble. similar to lists but the cannot be changed. Uses parenthesis instead of squar brackets
+tuple1 = (1,2,3)
+
+#creating a tuple from a string
+tuple2 = tuple(("python"))
+print(tuple2) #('p', 'y', 't', 'h', 'o', 'n')
+
+tuple3= tuple({1: 'chelsea', 2: 'josh'})
+print(tuple3) #(1,2)
+
+#benefits of using tuples over list: when you dont want to change value 
 
 
 
