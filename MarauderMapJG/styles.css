@@ -53,5 +53,9 @@
     box-shadow: rgba(214, 153, 61, 0.5) 0px 8px 24px;
 }
 
-
+.images-class{
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
 
