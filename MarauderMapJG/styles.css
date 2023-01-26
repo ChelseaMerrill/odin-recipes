@@ -59,3 +59,23 @@
     overflow: hidden;
 }
 
+@keyframes blink {
+    0% { text-shadow: 0 0 15px red; }
+    50% { text-shadow: none; }
+    100% { text-shadow: 0 0 15px red; }
+}
+
+@-webkit-keyframes blink {
+    0% { text-shadow: 0 0 15px red; }
+    50% { text-shadow: 0 0 0; }
+    100% { text-shadow: 0 0 15px red; }
+}
+
+.image-shadow {
+    border: 2px solid red;
+    /* -webkit-animation: blink 3.0s linear infinite;
+    -moz-animation: blink 3.0s linear infinite;
+    -ms-animation: blink 3.0s linear infinite;
+    -o-animation: blink 3.0s linear infinite;
+    animation: blink 3.0s linear infinite; */
+}

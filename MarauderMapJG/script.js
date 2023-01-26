@@ -25,6 +25,7 @@ window.onload = function () {
   emily_img.src = "emily.png";
   var dom_img = new Image();
   dom_img.src = "dom.png";
+  // dom_img.className = "image-shadow"
   var ant_img = new Image();
   ant_img.src = "ant.png";
   var darrin_img = new Image();
@@ -53,9 +54,9 @@ window.onload = function () {
   ctx.drawImage(grayce_img, 670, 180);
   ctx.drawImage(darrin_img, 1100, 740);
 
-  // window.requestAnimationFrame(drawZach)
-  // window.requestAnimationFrame(drawAshley)
-  // window.requestAnimationFrame(drawJory)
+  window.requestAnimationFrame(drawZach)
+  window.requestAnimationFrame(drawAshley)
+  window.requestAnimationFrame(drawJory)
 
 };
 
@@ -64,17 +65,17 @@ function drawAshley() {
   ctx = canvas.getContext("2d");
   var myImg = new Image();
   var myImgPos = {
-    x: 590,
-    y: 600,
-    width: 120,
-    height: 50
+    x: 200,
+    y: 550,
+    width: 480,
+    height: 200
   }
   function draw() {
     myImg.onload = function () {
       ctx.drawImage(myImg, myImgPos.x, myImgPos.y, myImgPos.width, myImgPos.height);
     }
 
-    myImg.src = "ashley.png";
+    myImg.src = "ashley_again.png";
   }
   function moveMyImg() {
     ctx.clearRect(myImgPos.x, myImgPos.y, myImgPos.x + myImgPos.width, myImgPos.y +
@@ -90,17 +91,17 @@ function drawZach() {
   ctx = canvas.getContext("2d");
   var myImg = new Image();
   var myImgPos = {
-    x: 650,
-    y: 680,
-    width: 120,
-    height: 50
+    x: 530,
+    y: 630,
+    width: 480,
+    height: 200
   }
   function drawZach() {
     myImg.onload = function () {
       ctx.drawImage(myImg, myImgPos.x, myImgPos.y, myImgPos.width, myImgPos.height);
     }
 
-    myImg.src = "zach.png";
+    myImg.src = "zach_again.png";
   }
   function moveZachImg() {
     ctx.clearRect(myImgPos.x, myImgPos.y, myImgPos.x + myImgPos.width, myImgPos.y +
@@ -116,17 +117,17 @@ function drawJory() {
   ctx = canvas.getContext("2d");
   var myImg = new Image();
   var myImgPos = {
-    x: 980,
-    y: 570,
-    width: 120,
-    height: 50
+    x: 760,
+    y: 450,
+    width: 480,
+    height: 300
   }
   function drawJory() {
     myImg.onload = function () {
       ctx.drawImage(myImg, myImgPos.x, myImgPos.y, myImgPos.width, myImgPos.height);
     }
 
-    myImg.src = "jory.png";
+    myImg.src = "jory_again.png";
   }
   function moveJoryImg() {
     ctx.clearRect(myImgPos.x, myImgPos.y, myImgPos.x + myImgPos.width, myImgPos.y +
