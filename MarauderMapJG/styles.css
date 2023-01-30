@@ -1,7 +1,9 @@
 .page{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(73, 11, 11);
+    background-image: url('./Untitled.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
 }

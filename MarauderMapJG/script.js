@@ -54,9 +54,10 @@ window.onload = function () {
   ctx.drawImage(grayce_img, 670, 180);
   ctx.drawImage(darrin_img, 1100, 740);
 
-  window.requestAnimationFrame(drawZach)
-  window.requestAnimationFrame(drawAshley)
-  window.requestAnimationFrame(drawJory)
+  // window.requestAnimationFrame(drawJory)
+  // window.requestAnimationFrame(drawAshley)
+  // window.requestAnimationFrame(drawZach)
+  
 
 };
 
@@ -67,7 +68,7 @@ function drawAshley() {
   var myImgPos = {
     x: 200,
     y: 550,
-    width: 480,
+    width: 460,
     height: 200
   }
   function draw() {
@@ -93,7 +94,7 @@ function drawZach() {
   var myImgPos = {
     x: 530,
     y: 630,
-    width: 480,
+    width: 460,
     height: 200
   }
   function drawZach() {
@@ -117,10 +118,10 @@ function drawJory() {
   ctx = canvas.getContext("2d");
   var myImg = new Image();
   var myImgPos = {
-    x: 760,
+    x: 790,
     y: 450,
-    width: 480,
-    height: 300
+    width: 420,
+    height: 260
   }
   function drawJory() {
     myImg.onload = function () {
@@ -132,8 +133,10 @@ function drawJory() {
   function moveJoryImg() {
     ctx.clearRect(myImgPos.x, myImgPos.y, myImgPos.x + myImgPos.width, myImgPos.y +
       myImgPos.height);
-    myImgPos.y -= 5;
+    myImgPos.y -= 6;
   }
   setInterval(drawJory, 500);
   setInterval(moveJoryImg, 500);
 }
+
+
