@@ -10,7 +10,7 @@ function myFunction() {
   }
 }
 
-window.onload = function () {
+ function startMap () {
   // var canvas = document.getElementById("canvas");
   // var ctx = canvas.getContext("2d");
   // var amanda_img = new Image();
