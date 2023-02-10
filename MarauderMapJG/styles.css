@@ -8,8 +8,11 @@
     justify-content: center;
     align-items: center;
 }
-.button{
+button{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover{
+    transform: scale(1.05);
 }
 .map{
     background-image: url('./paper-backgroup.jpg');
@@ -25,7 +28,7 @@
 
 .map-middle{
     width: 1200px;
-    background-image: url('./bgimaged.png');
+    background-image: url('./labled.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -49,38 +52,4 @@
 .map-cover-pic2{
     position: relative;
     right: 275px;
-}
-.middle{
-    border: 1px solid rgb(211, 172, 128);
-    width: 600px;
-    margin: auto;
-    height: 100%;
-    box-shadow: rgba(214, 153, 61, 0.5) 0px 8px 24px;
-}
-
-.images-class{
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
-}
-
-@keyframes blink {
-    0% { text-shadow: 0 0 15px red; }
-    50% { text-shadow: none; }
-    100% { text-shadow: 0 0 15px red; }
-}
-
-@-webkit-keyframes blink {
-    0% { text-shadow: 0 0 15px red; }
-    50% { text-shadow: 0 0 0; }
-    100% { text-shadow: 0 0 15px red; }
-}
-
-.image-shadow {
-    border: 2px solid red;
-    /* -webkit-animation: blink 3.0s linear infinite;
-    -moz-animation: blink 3.0s linear infinite;
-    -ms-animation: blink 3.0s linear infinite;
-    -o-animation: blink 3.0s linear infinite;
-    animation: blink 3.0s linear infinite; */
 }
